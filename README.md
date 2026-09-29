@@ -1,7 +1,3 @@
-Sure — here is a cleaner, GitHub-style `README.md` with a concise project overview, badges, features, installation, usage, and testing sections.
-
- README.md
-
 # Laravel Marketplace
 
  A Laravel-based marketplace application where users can register, post products, browse listings by **city and category**, search for products, and manage their own listings.
