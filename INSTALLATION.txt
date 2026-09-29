@@ -1,0 +1,120 @@
+# LARAVEL MARKETPLACE - INSTALLATION
+
+Requirements:
+
+* PHP 8.2+
+* Composer
+* MySQL
+
+1. Install dependencies
+
+   composer install
+
+2. Configure MySQL database in `.env`
+
+   DB_CONNECTION=mysql
+   DB_DATABASE=marketplace
+   DB_USERNAME=root
+   DB_PASSWORD=
+
+3. Generate application key
+
+   php artisan key:generate
+
+4. Run migrations
+
+   php artisan migrate
+
+5. Run database seeders
+
+   php artisan db:seed
+
+6. Create storage link
+
+   php artisan storage:link
+
+7. Start the application
+
+   php artisan serve
+
+Open: http://127.0.0.1:8000
+
+
+TESTING THE APPLICATION
+1. Register
+
+    Open the application.
+    Click "Register".
+    Enter Name, Email, Password and Password Confirmation.
+    Submit the registration form.
+
+2. Login
+
+    Click "Login".
+    Enter the registered email and password.
+    After successful login, you can post product.
+
+3. Create Product
+
+    Login to your account.
+    Open "Post Product".
+    Fill in all fields:
+    Submit the form.
+
+4. Category Navigation
+
+    Click "All Categories" to open the category list.
+    Select a main category to view its category-wise products.
+    Subcategories are also displayed under the main category.
+    Select a subcategory to view products for that subcategory.    
+
+    If a city is already selected, selecting a category will show
+    products filtered by both the selected city and category.
+
+    Example:
+    City:
+    /howrah_ct_624
+
+    Select Bikes:
+    /howrah_ct_624/bikes_cat_12
+
+5. Product Listing
+
+    Products can be browsed in different ways:
+
+    Category-wise listing
+        Example:
+        /bikes_cat_12
+
+    City-wise listing
+        Example:
+        /howrah_ct_624
+
+    City + Category listing
+        Example:
+        /howrah_ct_624/bikes_cat_12
+
+    Search
+        Use the search box to search for products.
+        Search preserves the current city/category listing URL.
+
+6. City Search / Filter
+
+    Use the city search box on the home page.
+    Start typing a city name.
+    Matching cities are displayed automatically using autocomplete.
+    Select a city from the suggestions.
+    The application redirects to the selected city's listing page.
+    Products are then filtered by the selected city.
+
+    Example:
+    /howrah_ct_624
+
+7. Manage Products
+
+    After logging in, you can:
+
+    View your products.
+    Edit your products.
+    Delete your products.
+    View product details and uploaded images.
